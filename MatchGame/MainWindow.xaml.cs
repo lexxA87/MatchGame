@@ -67,6 +67,10 @@ namespace MatchGame
                 }
             }
 
+            timer.Start();
+            tenthsOfSecondsElapsed = 0;
+            matchesFound = 0;
+
         }
 
 
@@ -83,6 +87,7 @@ namespace MatchGame
             }
             else if (textBlock.Text == lastTextBlockClicked.Text)
             {
+                matchesFound++;
                 textBlock.Visibility = Visibility.Hidden;
                 findingMatch = false;
             }
